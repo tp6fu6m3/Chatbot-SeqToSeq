@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Use the [**Chatbot**](https://github.com/tp6fu6m3/Chatbot) to train a Sequence to Sequence model.
+Use [**Chatbot**](https://github.com/tp6fu6m3/Chatbot) to train a Sequence to Sequence model.
 
 ## Quick Start
 
