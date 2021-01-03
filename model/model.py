@@ -82,6 +82,7 @@ class SeqToSeqModel():
         plt.ylabel('crossentropy')
         plt.xlabel('epoch')
         plt.legend()
+        plt.savefig('SeqToSeq_model_loss.png')
 
     def predict(self, questionSentence, dictionaryToUse):
         # pad the sequence and allocate answer
