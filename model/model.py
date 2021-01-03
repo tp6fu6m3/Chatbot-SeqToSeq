@@ -48,7 +48,7 @@ class SeqToSeqModel():
         distributions = classifierLayer2(classifierLayer1(features))
         self.kerasDecoderModel = Model([answers, encoded, hMemCells, cMemCells], [distributions, h, c])
 
-    def train(self, questionSentences, answerSentences):
+    def train(self, questionSentences, answerSentences, epoch):
         # check size match
         if len(questionSentences) != len (answerSentences):
             raise Exception('Training Data Size Not Matched')
@@ -73,7 +73,14 @@ class SeqToSeqModel():
         sampleWeights = pad_sequences(sampleWeights, maxlen = self.sentenceLength, padding = 'post')
         # train the model using API fit()
         dataToTrain = [questionsToTrain, answersToTrain]
-        self.kerasOverallModel.fit(dataToTrain, distributionsLabeled, 64, 1, verbose = 1, shuffle = True, sample_weight = sampleWeights)
+        hist = self.kerasOverallModel.fit(dataToTrain, distributionsLabeled, 64, epoch, 
+            verbose = 1, shuffle = True, sample_weight = sampleWeights)
+        
+        plt.plot(hist.history['categorical_crossentropy'])
+        plt.title('SeqToSeq model loss')
+        plt.ylabel('crossentropy')
+        plt.xlabel('epoch')
+        plt.legend()
 
     def predict(self, questionSentence, dictionaryToUse):
         # pad the sequence and allocate answer
