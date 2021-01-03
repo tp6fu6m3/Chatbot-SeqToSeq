@@ -77,7 +77,7 @@ class SeqToSeqModel():
         hist = self.kerasOverallModel.fit(dataToTrain, distributionsLabeled, 64, epoch, 
             verbose = 1, shuffle = True, sample_weight = sampleWeights)
         
-        plt.plot(hist.history['categorical_crossentropy'])
+        plt.plot(hist.history['loss'])
         plt.title('SeqToSeq model loss')
         plt.ylabel('crossentropy')
         plt.xlabel('epoch')
