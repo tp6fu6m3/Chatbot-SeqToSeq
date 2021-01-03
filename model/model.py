@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 
 import numpy as np
+import matplotlib.pyplot as plt
 import math
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
