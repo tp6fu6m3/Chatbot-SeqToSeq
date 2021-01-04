@@ -33,3 +33,23 @@ python3 train.py
 ```
 python3 demo.py
 ```
+
+## Repository Structure
+
+```
+Chatbot_seq2seq
+├── data
+│   ├── history.txt
+│   ├── messageList.txt
+│   ├── replyList.txt
+│   └── reader.py
+├── model
+│   ├── model.h5
+│   └── model.py
+├── demo.py
+├── README.md
+├── requirements.txt
+├── train.py
+└── utils.py
+
+```
