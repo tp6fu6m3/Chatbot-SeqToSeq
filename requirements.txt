@@ -3,3 +3,4 @@ jieba
 gensim
 argparse
 matplotlib
+tensorflow
