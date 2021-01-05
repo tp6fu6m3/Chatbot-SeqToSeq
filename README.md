@@ -1,4 +1,4 @@
-# Chatbot seq2seq
+# Chatbot implemented by sequence to sequence LSTM
 
 This repository contains a keras implementation of sequence to sequence LSTM model running on the your line conversation dataset augmented by [**Chatbot**](https://github.com/tp6fu6m3/Chatbot).
 
