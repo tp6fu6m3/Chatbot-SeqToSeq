@@ -12,7 +12,7 @@ cd Chatbot_seq2seq
 pip3 install -r requirements.txt
 ```
 
-2. Download [**Chatbot**](https://github.com/tp6fu6m3/Chatbot)
+2. Download [**Chatbot**](https://github.com/tp6fu6m3/Chatbot) as reply system
 
 ```
 cd data
@@ -20,13 +20,17 @@ git clone https://github.com/tp6fu6m3/Chatbot.git
 cd ..
 ```
 
-3. Train the model and save it as `model.h5`.
+3. Prepare your line history under `data/` or use provided history
+
+![Imgur](https://briian.com/wp-content/uploads/2013/03/LINE-backup-001.png)
+
+4. Train the model and save it as `model.h5`.
 
 ```
 python3 train.py
 ```
 
-4. Demonstrate the chatbot with the well-trained model.
+5. Demonstrate the chatbot with the well-trained model.
 
 ```
 python3 demo.py
